@@ -2,24 +2,16 @@ import java.util.Date;
 
 public class Paciente {
     String codPaciente;
-    String nombre;
-    String primerApellido;
-    String segundoApellido;
-    String DNI;
-    Date fechaNacimiento;
     String numeroSeguridadSocial;
-
-    public Paciente(String codPaciente, String nombre, String primerApellido, String segundoApellido, String DNI, Date fechaNacimiento, String numeroSeguridadSocial) {
-        this.codPaciente = codPaciente;
-        this.nombre = nombre;
-        this.primerApellido = primerApellido;
-        this.segundoApellido = segundoApellido;
-        this.DNI = DNI;
-        this.fechaNacimiento = fechaNacimiento;
-        this.numeroSeguridadSocial = numeroSeguridadSocial;
-    }
+    Persona persona;
 
     public Paciente() {
+    }
+
+    public Paciente(String codPaciente, String numeroSeguridadSocial, Persona persona) {
+        this.codPaciente = codPaciente;
+        this.numeroSeguridadSocial = numeroSeguridadSocial;
+        this.persona = persona;
     }
 
     public String getCodPaciente() {
@@ -30,46 +22,6 @@ public class Paciente {
         this.codPaciente = codPaciente;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getPrimerApellido() {
-        return primerApellido;
-    }
-
-    public void setPrimerApellido(String primerApellido) {
-        this.primerApellido = primerApellido;
-    }
-
-    public String getSegundoApellido() {
-        return segundoApellido;
-    }
-
-    public void setSegundoApellido(String segundoApellido) {
-        this.segundoApellido = segundoApellido;
-    }
-
-    public String getDNI() {
-        return DNI;
-    }
-
-    public void setDNI(String DNI) {
-        this.DNI = DNI;
-    }
-
-    public Date getFechaNacimiento() {
-        return fechaNacimiento;
-    }
-
-    public void setFechaNacimiento(Date fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
-    }
-
     public String getNumeroSeguridadSocial() {
         return numeroSeguridadSocial;
     }
@@ -78,16 +30,20 @@ public class Paciente {
         this.numeroSeguridadSocial = numeroSeguridadSocial;
     }
 
+    public Persona getPersona() {
+        return persona;
+    }
+
+    public void setPersona(Persona persona) {
+        this.persona = persona;
+    }
+
     @Override
     public String toString() {
         return "Paciente{" +
                 "codPaciente='" + codPaciente + '\'' +
-                ", nombre='" + nombre + '\'' +
-                ", primerApellido='" + primerApellido + '\'' +
-                ", segundoApellido='" + segundoApellido + '\'' +
-                ", DNI='" + DNI + '\'' +
-                ", fechaNacimiento=" + fechaNacimiento +
                 ", numeroSeguridadSocial='" + numeroSeguridadSocial + '\'' +
+                ", persona=" + persona +
                 '}';
     }
 }

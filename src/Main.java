@@ -9,6 +9,10 @@ public class Main {
         Date salida = new Date();
         Date birth = new Date();
 
+        Persona med1 = new Persona("Esteban","García","Rocha","MED100034X", birth);
+
+        Persona pac1 = new Persona("Pedro","Flores", "Fuentes", "PAC199923X", birth);
+
         Hospital santaMonica = new Hospital();
 
         List<Hospital> hosList1 = new ArrayList<>();
@@ -23,7 +27,7 @@ public class Main {
         serviceslist1.add(srv1);
         serviceslist1.add(srv2);
 
-        Medico docHead1 = new Medico("0000211Z", "Esteban", "Rocha", "Perez", "199990229999444", Aug23y984, serviceslist1, santaMonica);
+        Medico docHead1 = new Medico("0000211Z",serviceslist1, santaMonica, med1);
 
         santaMonica.setCodHospital("129ABTR00");
         santaMonica.setNombre("Santa Mónica");
@@ -33,7 +37,7 @@ public class Main {
         santaMonica.setDirector(docHead1);
 
 
-        Paciente PAC001A = new Paciente("PAC001A","Julia","Estivaris", "Ferrera", "19999942A-CCZN", birth, "SC0001922");
+        Paciente PAC001A = new Paciente("88822001", "SEC000192", pac1);
 
         Historial histo000x1 = new Historial("HIST-0001224", PAC001A);
 
