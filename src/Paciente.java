@@ -1,49 +1,12 @@
 import java.util.Date;
 
-public class Paciente {
+public class Paciente extends Persona {
     String codPaciente;
     String numeroSeguridadSocial;
-    Persona persona;
 
-    public Paciente() {
-    }
-
-    public Paciente(String codPaciente, String numeroSeguridadSocial, Persona persona) {
+    public Paciente(String nombre, String primerApellido, String segundoApellido, String DNI, Date fechaNacimiento, String codPaciente, String numeroSeguridadSocial) {
+        super(nombre, primerApellido, segundoApellido, DNI, fechaNacimiento);
         this.codPaciente = codPaciente;
         this.numeroSeguridadSocial = numeroSeguridadSocial;
-        this.persona = persona;
-    }
-
-    public String getCodPaciente() {
-        return codPaciente;
-    }
-
-    public void setCodPaciente(String codPaciente) {
-        this.codPaciente = codPaciente;
-    }
-
-    public String getNumeroSeguridadSocial() {
-        return numeroSeguridadSocial;
-    }
-
-    public void setNumeroSeguridadSocial(String numeroSeguridadSocial) {
-        this.numeroSeguridadSocial = numeroSeguridadSocial;
-    }
-
-    public Persona getPersona() {
-        return persona;
-    }
-
-    public void setPersona(Persona persona) {
-        this.persona = persona;
-    }
-
-    @Override
-    public String toString() {
-        return "Paciente{" +
-                "codPaciente='" + codPaciente + '\'' +
-                ", numeroSeguridadSocial='" + numeroSeguridadSocial + '\'' +
-                ", persona=" + persona +
-                '}';
     }
 }

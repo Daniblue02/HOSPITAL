@@ -27,7 +27,7 @@ public class Main {
         serviceslist1.add(srv1);
         serviceslist1.add(srv2);
 
-        Medico docHead1 = new Medico("0000211Z",serviceslist1, santaMonica, med1);
+        Medico docHead1 = new Medico("Roberto", "Sanchez", "Rocio", "12990001", birth, "MED01002", serviceslist1, santaMonica);
 
         santaMonica.setCodHospital("129ABTR00");
         santaMonica.setNombre("Santa Mónica");
@@ -37,7 +37,7 @@ public class Main {
         santaMonica.setDirector(docHead1);
 
 
-        Paciente PAC001A = new Paciente("88822001", "SEC000192", pac1);
+        Paciente PAC001A = new Paciente("Esteban", "Garcia", "Alanis", "129888512", birth, "PAC91222", "SEC91212");
 
         Historial histo000x1 = new Historial("HIST-0001224", PAC001A);
 
